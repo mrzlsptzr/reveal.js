@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<!-- Load content plugin -->
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/loadcontent/plugin.js"></script>
+		<!-- Animate plugin -->
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/animate/plugin.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js"></script>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+				  Folie 2
+				  <span class="fragment"></span>
+				  <span class="fragment"></span>
+
+				  <div data-animate data-load="http://localhost:8000/example.ink.svg">
+				  <!--
+				  { "setup": [
+				  { "element": "#g2", "modifier": "attr", "parameters": [ {"class": "fragment", "data-fragment-index": "0"} ] },
+				  { "element": "#g4", "modifier": "attr", "parameters": [ {"class": "fragment", "data-fragment-index": "1"} ] }
+				  ]}
+				  -->
+				  </div>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+        animate: {
+          autoplay: true // default is false
+        },
+
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealLoadContent, RevealAnimate ]
+			});
+		</script>
+	</body>
+</html>
